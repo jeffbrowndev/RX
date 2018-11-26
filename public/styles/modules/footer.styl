@@ -1,0 +1,25 @@
+@import 'variables';
+
+footer 
+  position absolute 
+  bottom 0
+  width 100%
+  background $grey 
+  padding $sectionPadding
+  .container
+    display flex
+    max-width 750px
+    margin auto
+    justify-content space-between
+    .newsletter, .social-media
+      padding 0 $smallPadding
+      border-left 4px solid $red
+      color $white
+      p
+        font-family $ralewayLight
+        padding $smallPadding 0
+    input
+      width 100%
+      padding $smallPadding 0 $smallPadding 10px
+      font-size 18px
+      margin-bottom $smallPadding

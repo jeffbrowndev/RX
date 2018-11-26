@@ -1,0 +1,74 @@
+@font-face {
+  font-family: ralewayLight;
+  src: url("/fonts/raleway-light.ttf");
+}
+@font-face {
+  font-family: ralewayBold;
+  src: url("/fonts/raleway-bold.ttf");
+}
+@font-face {
+  font-family: montserratBold;
+  src: url("/fonts/montserrat-bold.ttf");
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #101010;
+  padding: 100px 0;
+}
+footer .container {
+  display: flex;
+  max-width: 750px;
+  margin: auto;
+  justify-content: space-between;
+}
+footer .container .newsletter,
+footer .container .social-media {
+  padding: 0 15px;
+  border-left: 4px solid #350d0d;
+  color: #ededed;
+}
+footer .container .newsletter p,
+footer .container .social-media p {
+  font-family: ralewayLight;
+  padding: 15px 0;
+}
+footer .container input {
+  width: 100%;
+  padding: 15px 0 15px 10px;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+@font-face {
+  font-family: ralewayLight;
+  src: url("/fonts/raleway-light.ttf");
+}
+@font-face {
+  font-family: ralewayBold;
+  src: url("/fonts/raleway-bold.ttf");
+}
+@font-face {
+  font-family: montserratBold;
+  src: url("/fonts/montserrat-bold.ttf");
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background: #040404;
+}
+button {
+  border-style: none;
+  font-family: ralewayBold;
+  color: #ededed;
+  background: #350d0d;
+  min-width: 125px;
+  padding: 15px 0;
+  letter-spacing: 1px;
+}
+h3 {
+  font-family: montserratBold;
+  font-size: 22px;
+}
