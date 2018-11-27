@@ -1,3 +1,5 @@
+include line
+
 doctype html
 html
   head
@@ -5,14 +7,32 @@ html
     meta(charset='utf-8')
     link(rel="stylesheet", href="/styles/styles.css")
   body
+    nav
+      +line
     footer
       .container
         .newsletter
-          h3 JOIN THE NEWSLETTER
-          p Stay up to date on new content and concert dates
-          input(placeholder='Please enter your e-mail')
-          button SIGN UP
+          +line
+          .content
+            h3 JOIN THE NEWSLETTER
+            p Stay up to date on new content and&nbsp;concert&nbsp;dates
+            input(placeholder='Please enter your e-mail')
+            button SIGN UP
         .social-media
-          h3 FOLLOW RX
-          .button-row
+          +line
+          .content
+            h3 FOLLOW RX
+            .button-row
+              a(href="https://www.youtube.com/user/RobbieChristmas" target="_blank")
+                img(src='./images/youtube.svg')
+              a(href="https://www.instagram.com/rxrobbie" target="_blank")
+                img(src='./images/instagram.svg')
+              a(href="https://www.facebook.com/rxrobbie" target="_blank")
+                img(src='./images/facebook.svg')
+              a(href="https://twitter.com/rx_robbie" target="_blank")
+                img(src='./images/twitter.svg')
+                    
+              
+
+          
             
