@@ -5,9 +5,22 @@ html
   head
     title RX
     meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="/styles/styles.css")
   body
     nav
+      a(href='/')
+        img(src='/images/logoWhite.png')
+      input#menu(type='checkbox')
+      label#hamburger(for='menu')
+        .patty
+        .patty
+        .patty
+      ul
+        - const pages = ['HOME', 'ABOUT', 'BOOKING', 'MUSIC', 'CALENDAR', 'SET LIST LIBRARY', 'CONTACT']
+        each page in pages
+          li
+            a(href=`/${page != "HOME" ? page.toLowerCase() : ""}`)= page
       +line
     footer
       .container
@@ -31,8 +44,7 @@ html
                 img(src='./images/facebook.svg')
               a(href="https://twitter.com/rx_robbie" target="_blank")
                 img(src='./images/twitter.svg')
-                    
-              
 
-          
-            
+
+
+

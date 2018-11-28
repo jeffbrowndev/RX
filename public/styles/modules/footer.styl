@@ -3,10 +3,11 @@
 
 // Footer rules
 footer
-  position absolute 
+  z-index -1
+  position absolute
   bottom 0
   width 100%
-  background $grey 
+  background $grey
   padding $sectionPadding
   .container
     display flex
@@ -38,7 +39,6 @@ footer
       padding $smallPadding 0 $smallPadding 10px
       font-size 18px
       margin-bottom $smallPadding
-
 // Media queries
 footer
   +mQ(800px)
@@ -48,8 +48,8 @@ footer
       .newsletter, .social-media
         padding 0
         width 100%
-        justify-content: center
-        text-align: center
+        justify-content center
+        text-align center
         .line
           display none
       .newsletter
@@ -59,4 +59,3 @@ footer
           .button-row
             a
               margin $smallPadding 7.5px
-      

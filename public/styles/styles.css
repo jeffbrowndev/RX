@@ -31,6 +31,7 @@
   src: url("/fonts/montserrat-bold.ttf");
 }
 footer {
+  z-index: -1;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -104,7 +105,7 @@ footer .container input {
 }
 @media (max-width: 800px) {
   footer {
-    padding: 75px 3%;
+    padding: 60px 3%;
   }
   footer .container {
     display: block;
@@ -121,11 +122,27 @@ footer .container input {
     display: none;
   }
   footer .container .newsletter {
-    margin-bottom: 75px;
+    margin-bottom: 60px;
   }
   footer .container .social-media .content .button-row a {
     margin: 15px 7.5px;
   }
+}
+@font-face {
+  font-family: ralewayLight;
+  src: url("/fonts/raleway-light.ttf");
+}
+@font-face {
+  font-family: ralewayItalic;
+  src: url("/fonts/raleway-italic.ttf");
+}
+@font-face {
+  font-family: ralewayBold;
+  src: url("/fonts/raleway-bold.ttf");
+}
+@font-face {
+  font-family: montserratBold;
+  src: url("/fonts/montserrat-bold.ttf");
 }
 @font-face {
   font-family: ralewayLight;
@@ -164,6 +181,49 @@ nav {
   height: 75px;
   background: #111;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav img {
+  width: 70px;
+  margin-right: 15px;
+}
+nav #menu {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+}
+nav #hamburger {
+  position: absolute;
+  top: calc(50% - 3px);
+  right: 20px;
+  z-index: 9999;
+  color: #ededed;
+  display: none;
+  transition: 0.35s;
+}
+nav #hamburger .patty {
+  width: 5px;
+  height: 5px;
+  background: #ededed;
+  margin: 0px 2px;
+  border-radius: 1px;
+}
+nav ul {
+  z-index: 9999;
+  display: flex;
+  height: 100%;
+  font-family: ralewayBold;
+  letter-spacing: 3px;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  margin: 0 15px;
 }
 nav .line {
   display: flex;
@@ -181,6 +241,42 @@ nav .line .right {
   border-top: 3px solid transparent;
   border-left: 50vw solid #350d0d;
   border-bottom: 3px solid transparent;
+}
+@media (max-width: 960px) {
+  nav {
+    display: block;
+    height: 60px;
+  }
+  nav img {
+    margin: 15px 0 0 15px;
+    width: 45px;
+  }
+  nav #hamburger {
+    display: flex;
+  }
+  nav #menu:checked ~ ul {
+    transform: translateX(0);
+  }
+  nav #menu:checked ~ #hamburger {
+    transform: rotate(270deg);
+  }
+  nav ul {
+    position: absolute;
+    top: 0;
+    padding-top: calc(50vh - 161px);
+    width: 100%;
+    background: #040404;
+    z-index: 10;
+    height: 100vh;
+    display: block;
+    transform: translateX(-100%);
+    transition: 0.35s;
+  }
+  nav ul li {
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+  }
 }
 @font-face {
   font-family: ralewayLight;
@@ -218,4 +314,11 @@ button {
 h3 {
   font-family: montserratBold;
   font-size: 22px;
+}
+a {
+  text-decoration: none;
+  color: #ededed;
+}
+li {
+  list-style: none;
 }
