@@ -47,7 +47,7 @@ footer .container {
 footer .container .newsletter,
 footer .container .social-media {
   padding: 0 15px;
-  color: #ededed;
+  color: #d2d2d2;
   display: flex;
 }
 footer .container .newsletter p,
@@ -198,17 +198,17 @@ nav #menu {
 }
 nav #hamburger {
   position: absolute;
-  top: calc(50% - 3px);
+  top: calc(50% - 13px);
   right: 20px;
   z-index: 9999;
-  color: #ededed;
+  color: #d2d2d2;
   display: none;
   transition: 0.35s;
 }
 nav #hamburger .patty {
   width: 5px;
   height: 5px;
-  background: #ededed;
+  background: #d2d2d2;
   margin: 0px 2px;
   border-radius: 1px;
 }
@@ -253,6 +253,7 @@ nav .line .right {
   }
   nav #hamburger {
     display: flex;
+    padding: 10px 0;
   }
   nav #menu:checked ~ ul {
     transform: translateX(0);
@@ -265,7 +266,7 @@ nav .line .right {
     top: 0;
     padding-top: calc(50vh - 161px);
     width: 100%;
-    background: #040404;
+    background: #111;
     z-index: 10;
     height: 100vh;
     display: block;
@@ -305,7 +306,7 @@ body {
 button {
   border-style: none;
   font-family: ralewayBold;
-  color: #ededed;
+  color: #d2d2d2;
   background: #350d0d;
   min-width: 125px;
   padding: 15px 0;
@@ -317,7 +318,7 @@ h3 {
 }
 a {
   text-decoration: none;
-  color: #ededed;
+  color: #d2d2d2;
 }
 li {
   list-style: none;

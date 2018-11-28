@@ -1,4 +1,6 @@
+include footer
 include line
+include nav
 
 doctype html
 html
@@ -8,42 +10,9 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="/styles/styles.css")
   body
-    nav
-      a(href='/')
-        img(src='/images/logoWhite.png')
-      input#menu(type='checkbox')
-      label#hamburger(for='menu')
-        .patty
-        .patty
-        .patty
-      ul
-        - const pages = ['HOME', 'ABOUT', 'BOOKING', 'MUSIC', 'CALENDAR', 'SET LIST LIBRARY', 'CONTACT']
-        each page in pages
-          li
-            a(href=`/${page != "HOME" ? page.toLowerCase() : ""}`)= page
-      +line
-    footer
-      .container
-        .newsletter
-          +line
-          .content
-            h3 JOIN THE NEWSLETTER
-            p Stay up to date on new content and&nbsp;concert&nbsp;dates
-            input(placeholder='Please enter your e-mail')
-            button SIGN UP
-        .social-media
-          +line
-          .content
-            h3 FOLLOW RX
-            .button-row
-              a(href="https://www.youtube.com/user/RobbieChristmas" target="_blank")
-                img(src='./images/youtube.svg')
-              a(href="https://www.instagram.com/rxrobbie" target="_blank")
-                img(src='./images/instagram.svg')
-              a(href="https://www.facebook.com/rxrobbie" target="_blank")
-                img(src='./images/facebook.svg')
-              a(href="https://twitter.com/rx_robbie" target="_blank")
-                img(src='./images/twitter.svg')
+    +nav
+    block content
+    +footer
 
 
 

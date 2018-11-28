@@ -1,0 +1,15 @@
+mixin nav
+  nav
+    a(href='/')
+      img(src='/images/logoWhite.png')
+    input#menu(type='checkbox')
+    label#hamburger(for='menu')
+      .patty
+      .patty
+      .patty
+    ul
+      - const pages = ['HOME', 'ABOUT', 'BOOKING', 'MUSIC', 'CALENDAR', 'SET LIST LIBRARY', 'CONTACT']
+      each page in pages
+        li
+          a(href=`/${page != "HOME" ? page.toLowerCase() : ""}`)= page
+    +line
