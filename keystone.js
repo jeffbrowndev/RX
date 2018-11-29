@@ -9,7 +9,9 @@ keystone.init({
   auth: true,
   views: 'templates/views',
   'view engine': 'pug',
-  'static': 'public',
+  static: 'public',
+  'cloudinary config':
+    'cloudinary://857443731375474:_ejMllc9Bxt0vs2da9MMNIhhR2o@rx'
 });
 
 // Import models

@@ -7,12 +7,21 @@ block content
       h1 MUSIC
       img(src='/images/music_header.svg') 
       +line
-    .albums
-      //- Create an album display for each album in the database
-      each album in albums
-        .album 
-          h2= album.title
-          h3= album.releaseYear
-          ul
-            each track, i in album.tracks
-              li= (i+1) + ". " + track
+    .album-container
+      .albums
+        //- Create an album display for each album in the database
+        each album in albums
+          .album 
+            img(src=album._.image.fit(450, 450) alt='Album Cover')
+            .desc
+              h2= album.title
+              h4= album.releaseYear
+              +line
+              ul
+                each track, i in album.tracks
+                  li= (i+1) + ". " + track
+              .listen-links
+                a(href=album.spotifyUrl)
+                  img(src='/images/spotify.svg' alt='Spotify')
+                a(href=album.itunesUrl)
+                  img(src='/images/itunes.svg' alt='iTunes')

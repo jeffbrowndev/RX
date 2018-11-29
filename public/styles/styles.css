@@ -146,7 +146,7 @@ footer .container input {
 }
 @media (max-width: 800px) {
   footer {
-    padding: 60px 3%;
+    padding: 60px 4%;
   }
   footer .container {
     display: block;
@@ -229,16 +229,70 @@ footer .container input {
   font-family: montserratBold;
   src: url("/fonts/montserrat-bold.ttf");
 }
+.album-container {
+  display: flex;
+  justify-content: center;
+}
 .music {
   color: #d2d2d2;
-  overflow: hidden;
+}
+.music .album:not(:last-child) {
+  padding-bottom: 100px;
 }
 .music .albums {
   padding: 100px 3%;
   font-family: ralewayLight;
+  display: inline-block;
+}
+.music .albums .album {
+  display: flex;
+  align-content: center;
+}
+.music .albums .album h2 {
+  font-size: 32px;
+}
+.music .albums .album h4 {
+  font-size: 22px;
+  padding: 10px 0 25px 0;
+}
+.music .albums .album ul {
+  font-size: 20px;
+}
+.music .albums .album ul li {
+  padding-bottom: 10px;
+}
+.music .albums .album .desc {
+  margin-left: 25px;
+}
+.music .albums .album .desc .line {
+  display: flex;
+  padding-bottom: 25px;
+}
+.music .albums .album .desc .line .left {
+  border-left: 0px solid transparent;
+  border-top: 3px solid transparent;
+  border-right: 40px solid #350d0d;
+  border-bottom: 3px solid transparent;
+}
+.music .albums .album .desc .line .right {
+  border-right: 0px solid transparent;
+  border-top: 3px solid transparent;
+  border-left: 40px solid #350d0d;
+  border-bottom: 3px solid transparent;
+}
+.music .albums .album .desc .listen-links {
+  display: flex;
+  padding-top: 25px;
+}
+.music .albums .album .desc .listen-links a {
+  width: 30px;
+  margin-right: 10px;
 }
 .music .music-header {
   position: relative;
+  overflow-x: hidden;
+}
+.music .music-header img {
   width: 100%;
 }
 .music .music-header h1 {
@@ -253,6 +307,7 @@ footer .container input {
 .music .music-header .line {
   display: flex;
   position: absolute;
+  left: 0;
   bottom: 1.5px;
 }
 .music .music-header .line .left {
@@ -274,6 +329,34 @@ footer .container input {
   }
 }
 @media (max-width: 960px) {
+  .music .album-container .albums {
+    padding: 60px 4%;
+  }
+  .music .album-container .albums .album:not(:last-child) {
+    padding-bottom: 60px;
+  }
+  .music .album-container .albums .album {
+    display: block;
+  }
+  .music .album-container .albums .album img {
+    width: 100%;
+  }
+  .music .album-container .albums .album .desc {
+    margin: 15px 0 0 0;
+  }
+  .music .album-container .albums .album .desc h2 {
+    font-size: 26px;
+  }
+  .music .album-container .albums .album .desc h4 {
+    font-size: 20px;
+    padding: 10px 0 25px 0;
+  }
+  .music .album-container .albums .album .desc ul {
+    font-size: 18px;
+  }
+  .music .album-container .albums .album .desc ul li {
+    padding-bottom: 10px;
+  }
   .music .music-header img {
     width: 960px;
   }

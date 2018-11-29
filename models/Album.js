@@ -9,7 +9,10 @@ var Album = new keystone.List('Album', {
 Album.add({
   title: { type: String },
   releaseYear: { type: String },
-  tracks: { type: keystone.Field.Types.TextArray }
+  tracks: { type: keystone.Field.Types.TextArray },
+  image: { type: keystone.Field.Types.CloudinaryImage },
+  spotifyUrl: { type: String },
+  itunesUrl: { type: String }
 });
 
 Album.defaultColumns = 'title';

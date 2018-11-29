@@ -1,5 +1,21 @@
 @import 'variables'
 
+// Short horizontal red line
+lineHorzShort(w)
+  display: flex
+
+  .left
+    border-left: 0px solid transparent
+    border-top: 3px solid transparent
+    border-right: w solid $red
+    border-bottom: 3px solid transparent
+
+  .right
+    border-right: 0px solid transparent
+    border-top: 3px solid transparent
+    border-left: w solid $red
+    border-bottom: 3px solid transparent
+
 // Horizonal red line, full width/responsive
 lineHorz()
   display: flex
