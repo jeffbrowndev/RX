@@ -3,59 +3,62 @@
 
 // Footer rules
 footer
-  z-index -1
-  position absolute
-  bottom 0
-  width 100%
-  background $grey
-  padding $sectionPadding
+  z-index: -1
+  width: 100%
+  background: $grey
+  padding: $sectionPadding
+
   .container
-    display flex
-    max-width 960px
-    margin auto
-    justify-content space-between
+    display: flex
+    max-width: 960px
+    margin: auto
+    justify-content: space-between
+
     .newsletter, .social-media
-      padding 0 $smallPadding
-      color $white
-      display flex
+      padding: 0 $smallPadding
+      color: $white
+      display: flex
+
       p
-        font-family $ralewayLight
-        padding $smallPadding 0
+        font-family: $ralewayLight
+        padding: $smallPadding 0
+
     .newsletter
       .line
         lineVert(96px)
+
     .social-media
       .line
         lineVert(46px)
-      .content
-        .button-row
-          display flex
-          a
-            width 45px
-            height 45px
-            margin $smallPadding $smallPadding 0 0
+
     input
-      width 100%
-      padding $smallPadding 0 $smallPadding 10px
-      font-size 18px
-      margin-bottom $smallPadding
+      width: 100%
+      padding: $smallPadding 0 $smallPadding 10px
+      font-size: 18px
+      margin-bottom: $smallPadding
+
 // Media queries
 footer
   +mQ(800px)
-    padding $sectionPaddingMobile
+    padding: $sectionPaddingMobile
+
     .container
-      display block
+      display: block
+
       .newsletter, .social-media
-        padding 0
-        width 100%
-        justify-content center
-        text-align center
+        padding: 0
+        width: 100%
+        justify-content: center
+        text-align: center
+
         .line
-          display none
+          display: none
+
       .newsletter
-        margin-bottom $largePadding
+        margin-bottom: $largePadding
+
       .social-media
         .content
           .button-row
             a
-              margin $smallPadding 7.5px
+              margin: $smallPadding 7.5px

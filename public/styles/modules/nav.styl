@@ -10,6 +10,11 @@ nav
   align-items: center
   justify-content: center
 
+  .button-row
+    position: absolute
+    right: 0
+    top: 0
+
   img
     width: 70px
     margin-right: $smallPadding
@@ -31,11 +36,11 @@ nav
     transition: $slow
 
     .patty
-      width: 5px
-      height: 5px
+      width: 7px
+      height: 7px
       background: $white
       margin: 0px 2px
-      border-radius: 1px
+      border-radius: 7px
 
   ul
     z-index: 9999
@@ -53,11 +58,18 @@ nav
   .line
     lineHorz()
 
+    position: absolute
+    bottom: -1.5px
+
 // Media Queries
 nav
+  +mQ(1400px)
+    .button-row
+      display: none
+
   +mQ($tablet)
     display: block
-    height: 60px
+    height: 60pX
 
     img
       margin: $smallPadding 0 0 $smallPadding

@@ -1,0 +1,18 @@
+extends ../mixins/layout
+include ../mixins/line
+
+block content
+  .music
+    .music-header
+      h1 MUSIC
+      img(src='/images/music_header.svg') 
+      +line
+    .albums
+      //- Create an album display for each album in the database
+      each album in albums
+        .album 
+          h2= album.title
+          h3= album.releaseYear
+          ul
+            each track, i in album.tracks
+              li= (i+1) + ". " + track

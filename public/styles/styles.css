@@ -11,6 +11,10 @@
   src: url("/fonts/raleway-bold.ttf");
 }
 @font-face {
+  font-family: ralewayExtraBold;
+  src: url("/fonts/raleway-extrabold.ttf");
+}
+@font-face {
   font-family: montserratBold;
   src: url("/fonts/montserrat-bold.ttf");
 }
@@ -27,13 +31,58 @@
   src: url("/fonts/raleway-bold.ttf");
 }
 @font-face {
+  font-family: ralewayExtraBold;
+  src: url("/fonts/raleway-extrabold.ttf");
+}
+@font-face {
+  font-family: montserratBold;
+  src: url("/fonts/montserrat-bold.ttf");
+}
+.about h1 {
+  color: #d2d2d2;
+}
+@font-face {
+  font-family: ralewayLight;
+  src: url("/fonts/raleway-light.ttf");
+}
+@font-face {
+  font-family: ralewayItalic;
+  src: url("/fonts/raleway-italic.ttf");
+}
+@font-face {
+  font-family: ralewayBold;
+  src: url("/fonts/raleway-bold.ttf");
+}
+@font-face {
+  font-family: ralewayExtraBold;
+  src: url("/fonts/raleway-extrabold.ttf");
+}
+@font-face {
+  font-family: montserratBold;
+  src: url("/fonts/montserrat-bold.ttf");
+}
+@font-face {
+  font-family: ralewayLight;
+  src: url("/fonts/raleway-light.ttf");
+}
+@font-face {
+  font-family: ralewayItalic;
+  src: url("/fonts/raleway-italic.ttf");
+}
+@font-face {
+  font-family: ralewayBold;
+  src: url("/fonts/raleway-bold.ttf");
+}
+@font-face {
+  font-family: ralewayExtraBold;
+  src: url("/fonts/raleway-extrabold.ttf");
+}
+@font-face {
   font-family: montserratBold;
   src: url("/fonts/montserrat-bold.ttf");
 }
 footer {
   z-index: -1;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   background: #111;
   padding: 100px 3%;
@@ -89,14 +138,6 @@ footer .container .social-media .line .right {
   border-left: 3px solid #350d0d;
   border-bottom: 46px solid transparent;
 }
-footer .container .social-media .content .button-row {
-  display: flex;
-}
-footer .container .social-media .content .button-row a {
-  width: 45px;
-  height: 45px;
-  margin: 15px 15px 0 0;
-}
 footer .container input {
   width: 100%;
   padding: 15px 0 15px 10px;
@@ -141,20 +182,8 @@ footer .container input {
   src: url("/fonts/raleway-bold.ttf");
 }
 @font-face {
-  font-family: montserratBold;
-  src: url("/fonts/montserrat-bold.ttf");
-}
-@font-face {
-  font-family: ralewayLight;
-  src: url("/fonts/raleway-light.ttf");
-}
-@font-face {
-  font-family: ralewayItalic;
-  src: url("/fonts/raleway-italic.ttf");
-}
-@font-face {
-  font-family: ralewayBold;
-  src: url("/fonts/raleway-bold.ttf");
+  font-family: ralewayExtraBold;
+  src: url("/fonts/raleway-extrabold.ttf");
 }
 @font-face {
   font-family: montserratBold;
@@ -171,6 +200,124 @@ footer .container input {
 @font-face {
   font-family: ralewayBold;
   src: url("/fonts/raleway-bold.ttf");
+}
+@font-face {
+  font-family: ralewayExtraBold;
+  src: url("/fonts/raleway-extrabold.ttf");
+}
+@font-face {
+  font-family: montserratBold;
+  src: url("/fonts/montserrat-bold.ttf");
+}
+@font-face {
+  font-family: ralewayLight;
+  src: url("/fonts/raleway-light.ttf");
+}
+@font-face {
+  font-family: ralewayItalic;
+  src: url("/fonts/raleway-italic.ttf");
+}
+@font-face {
+  font-family: ralewayBold;
+  src: url("/fonts/raleway-bold.ttf");
+}
+@font-face {
+  font-family: ralewayExtraBold;
+  src: url("/fonts/raleway-extrabold.ttf");
+}
+@font-face {
+  font-family: montserratBold;
+  src: url("/fonts/montserrat-bold.ttf");
+}
+.music {
+  color: #d2d2d2;
+  overflow: hidden;
+}
+.music .albums {
+  padding: 100px 3%;
+  font-family: ralewayLight;
+}
+.music .music-header {
+  position: relative;
+  width: 100%;
+}
+.music .music-header h1 {
+  position: absolute;
+  top: calc(50% - 73.5px);
+  font-size: 125px;
+  letter-spacing: 25px;
+  width: 100%;
+  text-align: center;
+  font-family: ralewayExtraBold;
+}
+.music .music-header .line {
+  display: flex;
+  position: absolute;
+  bottom: 1.5px;
+}
+.music .music-header .line .left {
+  border-left: 0px solid transparent;
+  border-top: 3px solid transparent;
+  border-right: 50vw solid #350d0d;
+  border-bottom: 3px solid transparent;
+}
+.music .music-header .line .right {
+  border-right: 0px solid transparent;
+  border-top: 3px solid transparent;
+  border-left: 50vw solid #350d0d;
+  border-bottom: 3px solid transparent;
+}
+@media (max-width: 1400px) {
+  .music .music-header h1 {
+    font-size: 96px;
+    top: calc(50% - 56px);
+  }
+}
+@media (max-width: 960px) {
+  .music .music-header img {
+    width: 960px;
+  }
+  .music .music-header h1 {
+    font-size: 64px;
+    top: calc(50% - 37.5px);
+    left: 3%;
+  }
+}
+@font-face {
+  font-family: ralewayLight;
+  src: url("/fonts/raleway-light.ttf");
+}
+@font-face {
+  font-family: ralewayItalic;
+  src: url("/fonts/raleway-italic.ttf");
+}
+@font-face {
+  font-family: ralewayBold;
+  src: url("/fonts/raleway-bold.ttf");
+}
+@font-face {
+  font-family: ralewayExtraBold;
+  src: url("/fonts/raleway-extrabold.ttf");
+}
+@font-face {
+  font-family: montserratBold;
+  src: url("/fonts/montserrat-bold.ttf");
+}
+@font-face {
+  font-family: ralewayLight;
+  src: url("/fonts/raleway-light.ttf");
+}
+@font-face {
+  font-family: ralewayItalic;
+  src: url("/fonts/raleway-italic.ttf");
+}
+@font-face {
+  font-family: ralewayBold;
+  src: url("/fonts/raleway-bold.ttf");
+}
+@font-face {
+  font-family: ralewayExtraBold;
+  src: url("/fonts/raleway-extrabold.ttf");
 }
 @font-face {
   font-family: montserratBold;
@@ -184,6 +331,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+nav .button-row {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 nav img {
   width: 70px;
@@ -206,11 +358,11 @@ nav #hamburger {
   transition: 0.35s;
 }
 nav #hamburger .patty {
-  width: 5px;
-  height: 5px;
+  width: 7px;
+  height: 7px;
   background: #d2d2d2;
   margin: 0px 2px;
-  border-radius: 1px;
+  border-radius: 7px;
 }
 nav ul {
   z-index: 9999;
@@ -242,10 +394,15 @@ nav .line .right {
   border-left: 50vw solid #350d0d;
   border-bottom: 3px solid transparent;
 }
+@media (max-width: 1400px) {
+  nav .button-row {
+    display: none;
+  }
+}
 @media (max-width: 960px) {
   nav {
     display: block;
-    height: 60px;
+    height: 60pX;
   }
   nav img {
     margin: 15px 0 0 15px;
@@ -292,6 +449,10 @@ nav .line .right {
   src: url("/fonts/raleway-bold.ttf");
 }
 @font-face {
+  font-family: ralewayExtraBold;
+  src: url("/fonts/raleway-extrabold.ttf");
+}
+@font-face {
   font-family: montserratBold;
   src: url("/fonts/montserrat-bold.ttf");
 }
@@ -322,4 +483,15 @@ a {
 }
 li {
   list-style: none;
+}
+.button-row {
+  display: flex;
+}
+.button-row a {
+  width: 40px;
+  height: 40px;
+  margin: 15px 15px 0 0;
+}
+.button-row a img {
+  max-width: 40px;
 }

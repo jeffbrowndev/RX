@@ -1,0 +1,48 @@
+@import 'variables'
+@import 'mixins'
+
+// Music Rules
+.music
+  color: $white
+  overflow: hidden
+
+  .albums
+    padding: $sectionPadding
+    font-family: $ralewayLight
+
+  .music-header
+    position: relative
+    width: 100%
+
+    h1
+      position: absolute
+      top: calc(50% - 73.5px)
+      font-size: 125px
+      letter-spacing: 25px
+      width: 100%
+      text-align: center
+      font-family: $ralewayExtraBold
+
+    .line
+      lineHorz()
+
+      position: absolute
+      bottom: 1.5px
+
+// Media Queries
+.music
+  +mQ($desktopSmall)
+    .music-header
+      h1
+        font-size: 96px
+        top: calc(50% - 56px)
+
+  +mQ($tablet)
+    .music-header
+      img
+        width: 960px
+
+      h1
+        font-size: 64px
+        top: calc(50% - 37.5px)
+        left: 3%
