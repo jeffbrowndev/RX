@@ -1,0 +1,31 @@
+extends ../mixins/layout
+include ../mixins/line
+include ../mixins/social
+
+block content
+  .contact
+    .info
+      h1 BOOKING / CONTACT
+      p For all inquiries, booking, requests, press-related<br>material, or just to say "Hi", please email:
+      h4 RobbieChristmas@gmail.com
+      +social
+      .social-bar
+        ul  
+          li
+            a(href="https://www.patreon.com/RXRobbie" target='_blank') Patreon
+          li  
+            +line
+          li
+            a(href="https://www.facebook.com/rxrobbie" target='_blank') Facebook
+          li  
+            +line
+          li
+            a(href="https://www.instagram.com/rxrobbie" target='_blank') Instagram
+          li  
+            +line
+          li
+            a(href="https://twitter.com/rx_robbie" target='_blank') Twitter
+          li  
+            +line
+          li
+            a(href="https://www.youtube.com/user/RobbieChristmas" target='_blank') YouTube

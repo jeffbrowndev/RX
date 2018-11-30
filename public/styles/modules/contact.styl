@@ -1,0 +1,62 @@
+@import 'variables'
+@import 'mixins'
+
+// Contact styles
+.contact
+  padding-top: 75px
+  min-height: calc(100vh - 392px)
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+
+  .info
+    width: 100%
+    color: $white
+    text-align: center
+    padding: 0 4%
+
+    h1
+      font-size: 42px
+      font-family: $montserratBold
+      padding-bottom: $mediumPadding
+
+    p, h4, li
+      font-family: $ralewayLight
+      font-size: 20px
+
+    h4
+      padding: $mediumPadding 0
+
+    .button-row
+      display: none
+      justify-content: center
+
+    .social-bar
+      .line
+        lineVert(13px)
+
+        padding: 0
+        margin: 0
+
+      ul
+        display: flex
+        justify-content: center
+
+        li
+          padding: 0 10px
+
+// Media Queries
+.contact
+  +mQ(650px)
+    .info
+      padding: 60px 4%
+
+      h1
+        font-size: 32px
+
+      .button-row
+        display: flex
+
+    .social-bar
+      display: none
