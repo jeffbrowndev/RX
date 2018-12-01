@@ -1,0 +1,26 @@
+extends ../mixins/layout
+include ../mixins/line
+  
+block content
+  .setlist
+    .setlist-header
+      h1 SET LIST LIBRARY
+      +line
+      p.
+        This list is regularly being updated and augmented. 
+        If you don't see your song/artist(s), please feel free 
+        to e-mail your&nbsp;request.
+      input.search(placeholder='Search by song, artist, or genre')
+    .container
+      .rows
+        span SONG
+        span ARTIST
+        span GENRE
+      p.no-results Sorry, no results were found
+      each song in songs
+        .song
+          span.song-name= song.songName
+          span.artist= song.artist
+          span.genre= song.genre
+block scripts
+  script(src='../js/search.js')

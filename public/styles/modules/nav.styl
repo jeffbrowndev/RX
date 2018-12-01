@@ -2,104 +2,89 @@
 @import 'mixins'
 
 nav
-  width: 100%
-  height: 75px
-  background: $grey
-  position: fixed
-  z-index: 9999
-  display: flex
-  align-items: center
-  justify-content: center
-
+  width 100%
+  height 75px
+  background $grey
+  position fixed
+  z-index 9999
+  display flex
+  align-items center
+  justify-content center
   .button-row
-    position: absolute
-    right: 0
-    top: 0
-
+    position absolute
+    right 0
+    top 0
   img
-    width: 70px
-    margin-right: $smallPadding
-
+    width 70px
+    margin-right $smallPadding
   #menu
-    display: none
-    position: absolute
-    top: $smallPadding
-    right: $smallPadding
-    z-index: 9999
-
+    display none
+    position absolute
+    top $smallPadding
+    right $smallPadding
+    z-index 9999
   #hamburger
-    position: absolute
-    top: calc(50% - 13px)
-    right: 20px
-    z-index: 9999
-    color: $white
-    display: none
-    transition: $slow
-
+    position absolute
+    top calc(50% - 13px)
+    right 20px
+    z-index 9999
+    color $white
+    display none
+    transition $slow
     .patty
-      width: 7px
-      height: 7px
-      background: $white
-      margin: 0px 2px
-      border-radius: 7px
-
+      width 7px
+      height 7px
+      background $white
+      margin 0px 2px
+      border-radius 7px
   ul
-    z-index: 9999
-    display: flex
-    height: 100%
-    font-family: $ralewayBold
-    letter-spacing: 3px
-    font-size: 14px
-    justify-content: center
-    align-items: center
-
+    z-index 9999
+    display flex
+    height 100%
+    font-family $ralewayBold
+    letter-spacing 3px
+    font-size 14px
+    justify-content center
+    align-items center
     li
-      margin: 0 $smallPadding
-
+      margin 0 20px
   .line
     lineHorz()
 
-    position: absolute
-    bottom: -1px
-    left: 0
+    position absolute
+    bottom -1px
+    left 0
 
 // Media Queries
 nav
   +mQ(1400px)
     .button-row
-      display: none
-
+      display none
   +mQ($tablet)
-    display: block
-    height: 60pX
-
+    display block
+    height 60pX
     img
-      margin: $smallPadding 0 0 $smallPadding
-      width: 45px
-
+      margin $smallPadding 0 0 $smallPadding
+      width 45px
     #hamburger
-      display: flex
-      padding: 10px 0
-
+      display flex
+      padding 10px 0
     #menu:checked ~ ul
-      transform: translateX(0)
-
+      transform translateX(0)
     #menu:checked ~ #hamburger
-      transform: rotate(270deg)
-
+      transform rotate(270deg)
     ul
-      position: absolute
-      top: 0
-      padding-top: calc(50vh - 161px)
-      width: 100%
-      background: $grey
-      z-index: 10
-      height: 100vh
-      display: block
-      transform: translateX(-100%)
-      transition: $slow
-
+      position absolute
+      top 0
+      padding-top calc(50vh - 161px)
+      width 100%
+      background $grey
+      z-index 10
+      height 100vh
+      display block
+      transform translateX(-100%)
+      transition $slow
       li
-        text-align: center
-        margin: 0
-        padding: $smallPadding
+        text-align center
+        margin 0
+        padding $smallPadding

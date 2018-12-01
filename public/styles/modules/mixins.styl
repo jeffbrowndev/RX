@@ -2,53 +2,47 @@
 
 // Short horizontal red line
 lineHorzShort(w)
-  display: flex
-
+  display flex
   .left
-    border-left: 0px solid transparent
-    border-top: 3px solid transparent
-    border-right: w solid $red
-    border-bottom: 3px solid transparent
-
+    border-left 0px solid transparent
+    border-top 3px solid transparent
+    border-right w solid $red
+    border-bottom 3px solid transparent
   .right
-    border-right: 0px solid transparent
-    border-top: 3px solid transparent
-    border-left: w solid $red
-    border-bottom: 3px solid transparent
+    border-right 0px solid transparent
+    border-top 3px solid transparent
+    border-left w solid $red
+    border-bottom 3px solid transparent
 
 // Horizonal red line, full width/responsive
 lineHorz()
-  display: flex
-
+  display flex
   .left
-    border-left: 0px solid transparent
-    border-top: 3px solid transparent
-    border-right: 50vw solid $red
-    border-bottom: 3px solid transparent
-
+    border-left 0px solid transparent
+    border-top 3px solid transparent
+    border-right 50vw solid $red
+    border-bottom 3px solid transparent
   .right
-    border-right: 0px solid transparent
-    border-top: 3px solid transparent
-    border-left: 50vw solid $red
-    border-bottom: 3px solid transparent
+    border-right 0px solid transparent
+    border-top 3px solid transparent
+    border-left 50vw solid $red
+    border-bottom 3px solid transparent
 
 // Vertical red line, requires height argument
 lineVert(h)
-  max-height: h
-  display: flex
-  margin-right: 20px
-
+  max-height h
+  display flex
+  margin-right 20px
   .left
-    border-left: 0px solid transparent
-    border-top: h solid transparent
-    border-right: 3px solid $red
-    border-bottom: h solid transparent
-
+    border-left 0px solid transparent
+    border-top h solid transparent
+    border-right 3px solid $red
+    border-bottom h solid transparent
   .right
-    border-right: 0px solid transparent
-    border-top: h solid transparent
-    border-left: 3px solid $red
-    border-bottom: h solid transparent
+    border-right 0px solid transparent
+    border-top h solid transparent
+    border-left 3px solid $red
+    border-bottom h solid transparent
 
 // Media queries
 mQ(w)

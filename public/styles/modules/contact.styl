@@ -3,60 +3,57 @@
 
 // Contact styles
 .contact
-  padding-top: 75px
-  min-height: calc(100vh - 392px)
-  display: flex
-  justify-content: center
-  align-items: center
-  width: 100%
-
+  padding-top 75px
+  min-height calc(100vh - 392px)
+  display flex
+  justify-content center
+  align-items center
+  width 100%
   .info
-    width: 100%
-    color: $white
-    text-align: center
-    padding: 0 4%
-
+    width 100%
+    color $white
+    text-align center
+    padding 0 4%
     h1
-      font-size: 42px
-      font-family: $montserratBold
-      padding-bottom: $mediumPadding
-
+      font-size 38px
+      font-family $montserratBold
+      padding-bottom $mediumPadding
     p, h4, li
-      font-family: $ralewayLight
-      font-size: 20px
-
+      font-family $ralewayLight
+      font-size 20px
     h4
-      padding: $mediumPadding 0
-
+      font-size 24px
+      padding $mediumPadding 0
+      text-decoration underline
     .button-row
-      display: none
-      justify-content: center
-
+      display none
+      justify-content center
     .social-bar
       .line
-        lineVert(13px)
+        lineVert(10px)
 
-        padding: 0
-        margin: 0
-
+        padding 0
+        margin 0
       ul
-        display: flex
-        justify-content: center
-
+        display flex
+        justify-content center
         li
-          padding: 0 10px
+          font-size 16px
+          padding 0 10px
 
 // Media Queries
 .contact
   +mQ(650px)
+    padding-top 60px
     .info
-      padding: 60px 4%
-
+      padding 60px 4%
       h1
-        font-size: 32px
-
+        font-size 32pxd
+      p
+        font-size 18px
+      h4
+        font-size 18px
       .button-row
-        display: flex
-
+        display flex
     .social-bar
-      display: none
+      display none

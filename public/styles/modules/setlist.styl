@@ -1,0 +1,61 @@
+@import 'variables'
+@import 'mixins'
+
+// Setlist styles
+.setlist
+  padding 175px 0 $xLargePadding 0
+  color $white
+  min-height 100vh
+  .setlist-header
+    width 640px
+    margin auto
+    text-align center
+    input
+      width 100%
+      padding $smallPadding 0 $smallPadding 10px
+      font-size 16px
+      margin $mediumPadding 0
+    h1
+      font-size 38px
+      font-family $montserratBold
+    .line
+      lineHorzShort(45px)
+
+      padding $mediumPadding 0
+      justify-content center
+    p
+      font-family $ralewayItalic
+      font-size 20px
+  .container
+    .no-results
+      text-align center
+      font-family $ralewayLight
+      font-size 24px
+      padding $xLargePadding 4%
+      display none
+    .rows
+      font-family $ralewayExtraBold
+    .song
+      font-family $ralewayLight
+      background $grey
+      border-bottom 2px solid $black
+    .song, .rows
+      width 960px
+      margin auto
+      display flex
+      span
+        padding 10px
+        flex-basis calc((100% / 3))
+
+// Media Queries
+.setlist
+  +mQ(960px)
+    padding 120px 4% $sectionPaddingMobile
+    .setlist-header
+      width 100%
+    .container
+      .no-results
+        width 100%
+      .song, .rows
+        width 100%
+        font-size 14px
