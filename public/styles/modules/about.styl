@@ -2,5 +2,114 @@
 @import 'mixins'
 
 .about
-  h1
-    color: $white
+  padding-top 75px
+  .bio
+    width 960px
+    margin auto
+    color $white
+    display flex
+    padding $sectionPadding
+    img
+      width 50%
+      padding-right $mediumPadding
+    .bio-container
+      width 50%
+      h1
+        font-size 38px
+        font-family $montserratBold
+        padding-bottom $mediumPadding
+      .text
+        font-family $ralewayLight
+        line-height 1.75
+      .quote
+        font-size 20px
+        font-family $ralewayItalic
+      .line
+        lineHorzShort(40px)
+
+        padding $mediumPadding 0
+  .gallery-container
+    background $grey
+    position relative
+    .slider
+      width 100%
+      padding 200px 0
+    .line
+      lineHorz()
+    .line:first-child
+      position absolute
+      top -2px
+    .line:last-child
+      position absolute
+      bottom -2px
+  .timeline-container
+    padding $sectionPadding
+    background url('/images/background.png')
+    background-size cover
+    background-repeat no-repeat
+    background-position center
+    h1
+      color $white
+      text-align center
+      font-family $montserratBold
+      font-size 38px
+      padding-bottom $xLargePadding
+    .timeline
+      position relative
+      width 960px
+      margin auto
+      color $white
+      .timeline-event-container:nth-child(even)
+        eventMixinRight()
+      .timeline-event-container:nth-child(odd)
+        eventMixinLeft()
+    .timeline-line
+      border-left 2px dashed $white
+      height 100%
+      position absolute
+      top 0
+      left calc(50% - 1px)
+
+// Media queries
+.about
+  +mQ(960px)
+    .bio
+      padding $sectionPaddingMobile
+      width 100%
+      display block
+      // text-align center
+      h1
+        text-align center
+      img
+        width 480px
+        margin auto
+        padding 0 0 60px 0
+      .bio-container
+        width 480px
+        margin auto
+        .line
+          justify-content center
+    .timeline-container
+      padding $sectionPaddingMobile
+      h1
+        padding-bottom $largePadding
+      .timeline
+        width 95%
+  +mQ(550px)
+    .bio
+      img, .bio-container
+        width 100%
+    .timeline-container
+      .timeline-line
+        left 11px
+      .timeline-event-container
+        display block !important
+        padding 30px 0 30px 50px !important
+        .event
+          padding 0 !important
+          text-align left !important
+          width 100% !important
+        .year
+          margin 0 !important
+        .circle
+          left 0

@@ -1,5 +1,60 @@
 @import 'variables'
 
+// Timeline event - left facing
+eventMixinLeft()
+  width 100%
+  display flex
+  align-items center
+  justify-content flex-start
+  position relative
+  padding $mediumPadding 0
+  .year
+    order 2
+    font-family $montserratBold
+    margin-left $mediumPadding
+    font-size 20px
+  .event
+    order 1
+    padding-right $mediumPadding
+    text-align right
+    font-family $ralewayLight
+    width 50%
+  .circle
+    z-index 10
+    width 22px
+    height 22px
+    border-radius 22px
+    background $red
+    border 2px solid $white
+    position absolute
+    right calc(50% - 11px)
+
+// Timeline event - right facing
+eventMixinRight()
+  width 100%
+  display flex
+  align-items center
+  justify-content flex-end
+  padding $mediumPadding 0
+  .year
+    font-family $montserratBold
+    padding-right $mediumPadding
+    font-size 24px
+    font-size 20px
+  .event
+    padding-left $mediumPadding
+    font-family $ralewayLight
+    width 50%
+  .circle
+    z-index 10
+    width 22px
+    height 22px
+    border-radius 22px
+    background $red
+    border 2px solid $white
+    position absolute
+    right calc(50% - 11px)
+
 // Short horizontal red line
 lineHorzShort(w)
   display flex
@@ -44,11 +99,12 @@ lineVert(h)
     border-left 3px solid $red
     border-bottom h solid transparent
 
-// Media queries
+// Media query max-width
 mQ(w)
   @media (max-width: w)
     {block}
 
+// Media query min-width
 mQmin(w)
   @media (min-width: w)
     {block}

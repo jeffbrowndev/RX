@@ -1,5 +1,35 @@
 extends ../mixins/layout
+include ../mixins/line
+include ../mixins/timelineEvent
 
 block content
   .about
-    h1 hello
+    .bio
+      img(src='/images/rx_falling.svg')
+      .bio-container
+        h1 ABOUT
+        p.quote.
+          "...If Imagine Dragons produced a Crosby, Stills, Nash and Young 
+          record in the same studio John Mayer wrote 'Continuum'..."
+        +line
+        p.text.
+          RX (real name Robbie Christmas) is a Seattle-based singer songwriter 
+          and instrumentalist best known for his pure, unique voice, timeless 
+          lyrics and skilled guitar playing.<br><br>His sound can best be described 
+          as classic and electric; comprising of intricate guitar parts and the 
+          modern production of bands like Amos Lee and Vance Joy wrapped in layers 
+          of familiar melodies and harmonies reminiscent of his heroes, James 
+          Taylor and Crosby, Still, Nash and Young.
+    .gallery-container
+      +line
+      .slider
+      +line
+    .timeline-container
+      h1 TIMELINE
+      .timeline
+        .timeline-line
+        each event in TimelineEvents
+          +eventMixin(event.year, event.event)
+
+
+            

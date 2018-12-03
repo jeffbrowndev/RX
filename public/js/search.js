@@ -4,7 +4,7 @@ const songs = document.querySelectorAll('.song');
 const noResults = document.querySelector('.no-results');
 
 // Filter set list based on search input
-const searchFilter = (e) => {
+const searchFilter = () => {
 
   // What is currently typed in the search bar
   const typed = search.value.replace(/ /g, '').toLowerCase();
