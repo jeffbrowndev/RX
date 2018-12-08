@@ -29,11 +29,13 @@
 
         padding $mediumPadding 0
   .gallery-container
-    background $grey
     position relative
-    .slider
+    .slider-container
       width 100%
-      padding 200px 0
+      padding $smallPadding 0
+      img
+        width 100%
+        height auto
     .line
       lineHorz()
     .line:first-child
@@ -77,7 +79,7 @@
       padding $sectionPaddingMobile
       width 100%
       display block
-      // text-align center
+      text-align center
       h1
         text-align center
       img
@@ -95,6 +97,11 @@
         padding-bottom $largePadding
       .timeline
         width 95%
+  +mQ(900px)
+    .glide__arrow
+      display none
+    .glide__bullets
+      bottom $smallPadding
   +mQ(550px)
     .bio
       img, .bio-container

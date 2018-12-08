@@ -22,7 +22,29 @@ block content
           Taylor and Crosby, Still, Nash and Young.
     .gallery-container
       +line
-      .slider
+      .slider-container
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              each image in Images
+                li 
+                  img(src=image._.image.fit(600, 0))
+            </ul>
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              img(src="/images/arrow_left.svg")
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+              img(src="/images/arrow_right.svg")
+            </button>
+          </div>
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            each image, i in Images
+              button.glide__bullet(data-glide-dir=`=${i}`)
+          </div>
+        </div>
+          
       +line
     .timeline-container
       h1 TIMELINE
@@ -30,6 +52,10 @@ block content
         .timeline-line
         each event in TimelineEvents
           +eventMixin(event.year, event.event)
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/@glidejs/glide")
+  script(src='../js/slider.js')
 
 
             

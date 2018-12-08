@@ -1,4 +1,66 @@
-extends ../mixins/layout
+extends ../mixins/layoutHome
+include ../mixins/social
+include ../mixins/line
+include ../mixins/event
+include ../mixins/nav
 
 block content
-  h1 Hello
+  .home-container
+    +nav
+    .home
+      +social
+      .home-navigation
+        +line
+        ul
+          li
+            img(src='/images/logoWhite.png')
+          li
+            a(href='/') HOME
+          li
+            a(href='/calendar') CALENDAR
+          li
+            a(href='/music') MUSIC
+          li
+            a(href='/about') ABOUT
+          li
+            a(href='/setlist') SET LIST LIBRARY
+          li
+            a(href='/contact') BOOKING/CONTACT
+      img.home-header-mobile(src="/images/home_header_mobile.jpg")
+      .event-slider-container
+        .event-slider
+          <div class="glide-home">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                each event in events
+                  +event(event)
+              </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                img(src="/images/arrow_left.svg")
+              </button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                img(src="/images/arrow_right.svg")
+              </button>
+            </div>
+          </div>
+    .patreon-section
+      +line
+      .patreon-section-content
+        .patreon-header
+          h1 BECOME AN 
+          img(src='/images/rx_logo_glitch.png')
+          h1.patron PATRON
+        p.
+          Choose between 2 pledge tiers to unlock exclusive access to livestreams, 
+          monthly podcasts, early access to music, downloads,&nbsp;and&nbsp;more.
+        a(href='https://patreon.com/rxrobbie' target="_blank")
+          button.patreon-button BECOME A PATRON
+
+    +footer
+           
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/@glidejs/glide")
+  script(src='../js/slider_home.js')

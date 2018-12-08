@@ -1,0 +1,23 @@
+//- Event slide for the homepage
+mixin event(event)
+  .event-slide
+    .event-header
+      span.event-description= event.description
+      span.event-description  @&nbsp;
+      span.event-description= event.venue
+      p.event-location= event.location
+    .event-info
+      .date
+        span= `${event._.dateTime.format('dddd')}, `
+        span= event._.dateTime.format('LL')
+        p= event._.dateTime.format('LT')
+      .cost
+        if(event.price > 0)
+          span= `$${event.price}.00 / `
+        else
+          span Free&nbsp;/&nbsp;
+        span= event.ages
+    if(event.ticketLink)
+      a(href=`${event.ticketLink}` target='_blank')
+        button.event-button BUY TICKETS
+

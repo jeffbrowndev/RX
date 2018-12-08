@@ -1,0 +1,17 @@
+extends ../mixins/layout
+
+block links
+  link(rel='stylesheet' href='/fullcalendar/fullcalendar.min.css')
+
+block content
+  .calendar-container
+    #calendar
+
+block scripts
+  script(src='../fullcalendar/lib/jquery.min.js')
+  script(src='../fullcalendar/lib/moment.min.js')
+  script(src='../fullcalendar/fullcalendar.min.js')
+  script(src='fullcalendar/gcal.min.js')
+  script(src='js/calendar.js') 
+
+       

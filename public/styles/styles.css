@@ -83,22 +83,25 @@
 .about .bio .bio-container .line .left {
   border-left: 0px solid transparent;
   border-top: 3px solid transparent;
-  border-right: 40px solid #350d0d;
+  border-right: 40px solid #4f0606;
   border-bottom: 3px solid transparent;
 }
 .about .bio .bio-container .line .right {
   border-right: 0px solid transparent;
   border-top: 3px solid transparent;
-  border-left: 40px solid #350d0d;
+  border-left: 40px solid #4f0606;
   border-bottom: 3px solid transparent;
 }
 .about .gallery-container {
-  background: #111;
   position: relative;
 }
-.about .gallery-container .slider {
+.about .gallery-container .slider-container {
   width: 100%;
-  padding: 200px 0;
+  padding: 15px 0;
+}
+.about .gallery-container .slider-container img {
+  width: 100%;
+  height: auto;
 }
 .about .gallery-container .line {
   display: flex;
@@ -106,13 +109,13 @@
 .about .gallery-container .line .left {
   border-left: 0px solid transparent;
   border-top: 3px solid transparent;
-  border-right: 50vw solid #350d0d;
+  border-right: 50vw solid #4f0606;
   border-bottom: 3px solid transparent;
 }
 .about .gallery-container .line .right {
   border-right: 0px solid transparent;
   border-top: 3px solid transparent;
-  border-left: 50vw solid #350d0d;
+  border-left: 50vw solid #4f0606;
   border-bottom: 3px solid transparent;
 }
 .about .gallery-container .line:first-child {
@@ -166,7 +169,7 @@
   width: 22px;
   height: 22px;
   border-radius: 22px;
-  background: #350d0d;
+  background: #4f0606;
   border: 2px solid #d2d2d2;
   position: absolute;
   right: calc(50% - 11px);
@@ -197,7 +200,7 @@
   width: 22px;
   height: 22px;
   border-radius: 22px;
-  background: #350d0d;
+  background: #4f0606;
   border: 2px solid #d2d2d2;
   position: absolute;
   right: calc(50% - 11px);
@@ -214,6 +217,7 @@
     padding: 60px 4%;
     width: 100%;
     display: block;
+    text-align: center;
   }
   .about .bio h1 {
     text-align: center;
@@ -240,6 +244,14 @@
     width: 95%;
   }
 }
+@media (max-width: 900px) {
+  .about .glide__arrow {
+    display: none;
+  }
+  .about .glide__bullets {
+    bottom: 15px;
+  }
+}
 @media (max-width: 550px) {
   .about .bio img,
   .about .bio .bio-container {
@@ -263,6 +275,61 @@
   .about .timeline-container .timeline-event-container .circle {
     left: 0;
   }
+}
+@font-face {
+  font-family: ralewayLight;
+  src: url("/fonts/raleway-light.ttf");
+}
+@font-face {
+  font-family: ralewayItalic;
+  src: url("/fonts/raleway-italic.ttf");
+}
+@font-face {
+  font-family: ralewayMedium;
+  src: url("/fonts/raleway-medium.ttf");
+}
+@font-face {
+  font-family: ralewayBold;
+  src: url("/fonts/raleway-bold.ttf");
+}
+@font-face {
+  font-family: ralewayExtraBold;
+  src: url("/fonts/raleway-extrabold.ttf");
+}
+@font-face {
+  font-family: montserratBold;
+  src: url("/fonts/montserrat-bold.ttf");
+}
+@font-face {
+  font-family: ralewayLight;
+  src: url("/fonts/raleway-light.ttf");
+}
+@font-face {
+  font-family: ralewayItalic;
+  src: url("/fonts/raleway-italic.ttf");
+}
+@font-face {
+  font-family: ralewayMedium;
+  src: url("/fonts/raleway-medium.ttf");
+}
+@font-face {
+  font-family: ralewayBold;
+  src: url("/fonts/raleway-bold.ttf");
+}
+@font-face {
+  font-family: ralewayExtraBold;
+  src: url("/fonts/raleway-extrabold.ttf");
+}
+@font-face {
+  font-family: montserratBold;
+  src: url("/fonts/montserrat-bold.ttf");
+}
+#calendar {
+  padding: 175px 0 100px 0;
+  color: #d2d2d2;
+  font-family: ralewayLight;
+  max-width: 960px;
+  margin: auto;
 }
 @font-face {
   font-family: ralewayLight;
@@ -356,13 +423,13 @@
 .contact .info .social-bar .line .left {
   border-left: 0px solid transparent;
   border-top: 10px solid transparent;
-  border-right: 3px solid #350d0d;
+  border-right: 3px solid #4f0606;
   border-bottom: 10px solid transparent;
 }
 .contact .info .social-bar .line .right {
   border-right: 0px solid transparent;
   border-top: 10px solid transparent;
-  border-left: 3px solid #350d0d;
+  border-left: 3px solid #4f0606;
   border-bottom: 10px solid transparent;
 }
 .contact .info .social-bar ul {
@@ -447,14 +514,20 @@
 footer {
   z-index: -1;
   width: 100%;
-  background: #111;
+  background: #101010;
   padding: 100px 0;
+}
+footer button {
+  min-width: 125px;
 }
 footer .container {
   display: flex;
   max-width: 960px;
   margin: auto;
   justify-content: space-between;
+}
+footer .container .button-row {
+  padding-top: 7px;
 }
 footer .container .newsletter,
 footer .container .social-media {
@@ -474,13 +547,13 @@ footer .container .newsletter .line {
 footer .container .newsletter .line .left {
   border-left: 0px solid transparent;
   border-top: 96px solid transparent;
-  border-right: 3px solid #350d0d;
+  border-right: 3px solid #4f0606;
   border-bottom: 96px solid transparent;
 }
 footer .container .newsletter .line .right {
   border-right: 0px solid transparent;
   border-top: 96px solid transparent;
-  border-left: 3px solid #350d0d;
+  border-left: 3px solid #4f0606;
   border-bottom: 96px solid transparent;
 }
 footer .container .social-media .line {
@@ -491,13 +564,13 @@ footer .container .social-media .line {
 footer .container .social-media .line .left {
   border-left: 0px solid transparent;
   border-top: 46px solid transparent;
-  border-right: 3px solid #350d0d;
+  border-right: 3px solid #4f0606;
   border-bottom: 46px solid transparent;
 }
 footer .container .social-media .line .right {
   border-right: 0px solid transparent;
   border-top: 46px solid transparent;
-  border-left: 3px solid #350d0d;
+  border-left: 3px solid #4f0606;
   border-bottom: 46px solid transparent;
 }
 footer .container input {
@@ -529,6 +602,419 @@ footer .container input {
   }
   footer .container .social-media .content .button-row a {
     margin: 15px 7.5px;
+  }
+}
+@font-face {
+  font-family: ralewayLight;
+  src: url("/fonts/raleway-light.ttf");
+}
+@font-face {
+  font-family: ralewayItalic;
+  src: url("/fonts/raleway-italic.ttf");
+}
+@font-face {
+  font-family: ralewayMedium;
+  src: url("/fonts/raleway-medium.ttf");
+}
+@font-face {
+  font-family: ralewayBold;
+  src: url("/fonts/raleway-bold.ttf");
+}
+@font-face {
+  font-family: ralewayExtraBold;
+  src: url("/fonts/raleway-extrabold.ttf");
+}
+@font-face {
+  font-family: montserratBold;
+  src: url("/fonts/montserrat-bold.ttf");
+}
+.glide {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+.glide-home {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+.glide * {
+  box-sizing: inherit;
+}
+.glide__track {
+  overflow: hidden;
+}
+.glide__slides {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  touch-action: pan-Y;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  will-change: transform;
+}
+.glide__slides--dragging {
+  user-select: none;
+}
+.glide__slide {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-shrink: 0;
+  white-space: normal;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.glide__slide a {
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.glide__arrows {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+.glide__bullets {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+.glide--rtl {
+  direction: rtl;
+}
+.glide__arrow {
+  position: absolute;
+  display: block;
+  top: 50%;
+  z-index: 2;
+  color: #fff;
+  text-transform: uppercase;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  letter-spacing: 0;
+  background-color: transparent;
+  border-radius: 25px;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0,0,0,0.1);
+  text-shadow: 0 0.25em 0.5em rgba(0,0,0,0.1);
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  transform: translateY(-50%);
+  line-height: 1;
+}
+@media (max-width: 960px) {
+  .glide__arrow {
+    display: none;
+  }
+}
+.glide__arrow:focus {
+  outline: none;
+}
+.glide__arrow:hover {
+  border-color: #fff;
+}
+.glide__arrow--left {
+  left: 2em;
+}
+.glide__arrow--right {
+  right: 2em;
+}
+.glide__arrow--disabled {
+  opacity: 0.33;
+}
+.glide__bullets {
+  position: absolute;
+  z-index: 2;
+  bottom: 2em;
+  left: 50%;
+  display: inline-flex;
+  list-style: none;
+  transform: translateX(-50%);
+}
+.glide__bullet {
+  background-color: rgba(255,255,255,0.5);
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  line-height: 0;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0,0,0,0.1);
+  margin: 0 0.25em;
+}
+.glide__bullet:focus {
+  outline: none;
+}
+.glide__bullet:hover,
+.glide__bullet:focus {
+  border: 2px solid #fff;
+  background-color: rgba(255,255,255,0.5);
+}
+.glide__bullet--active {
+  background-color: #fff;
+}
+.glide--swipeable {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+.glide--dragging {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+@font-face {
+  font-family: ralewayLight;
+  src: url("/fonts/raleway-light.ttf");
+}
+@font-face {
+  font-family: ralewayItalic;
+  src: url("/fonts/raleway-italic.ttf");
+}
+@font-face {
+  font-family: ralewayMedium;
+  src: url("/fonts/raleway-medium.ttf");
+}
+@font-face {
+  font-family: ralewayBold;
+  src: url("/fonts/raleway-bold.ttf");
+}
+@font-face {
+  font-family: ralewayExtraBold;
+  src: url("/fonts/raleway-extrabold.ttf");
+}
+@font-face {
+  font-family: montserratBold;
+  src: url("/fonts/montserrat-bold.ttf");
+}
+@font-face {
+  font-family: ralewayLight;
+  src: url("/fonts/raleway-light.ttf");
+}
+@font-face {
+  font-family: ralewayItalic;
+  src: url("/fonts/raleway-italic.ttf");
+}
+@font-face {
+  font-family: ralewayMedium;
+  src: url("/fonts/raleway-medium.ttf");
+}
+@font-face {
+  font-family: ralewayBold;
+  src: url("/fonts/raleway-bold.ttf");
+}
+@font-face {
+  font-family: ralewayExtraBold;
+  src: url("/fonts/raleway-extrabold.ttf");
+}
+@font-face {
+  font-family: montserratBold;
+  src: url("/fonts/montserrat-bold.ttf");
+}
+.home-container nav {
+  display: none;
+}
+.home-container .home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("/images/home_header.jpg") no-repeat;
+  background-size: cover;
+  background-position: center top;
+  padding-top: 15px;
+}
+.home-container .home .home-header-mobile {
+  width: 100%;
+  display: none;
+}
+.home-container .home .button-row {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+.home-container .home .home-navigation .line {
+  max-height: 186.5px;
+  display: flex;
+  margin-right: 20px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  margin-left: 15px;
+}
+.home-container .home .home-navigation .line .left {
+  border-left: 0px solid transparent;
+  border-top: 186.5px solid transparent;
+  border-right: 3px solid #4f0606;
+  border-bottom: 186.5px solid transparent;
+}
+.home-container .home .home-navigation .line .right {
+  border-right: 0px solid transparent;
+  border-top: 186.5px solid transparent;
+  border-left: 3px solid #4f0606;
+  border-bottom: 186.5px solid transparent;
+}
+.home-container .home .home-navigation ul {
+  z-index: 9999;
+  font-family: ralewayBold;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+.home-container .home .home-navigation li {
+  padding: 15px 0 15px 45px;
+}
+.home-container .home .home-navigation li img {
+  max-width: 100px;
+}
+.home-container .home .event-slider-container {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home-container .home .event-slider-container .event-slider {
+  position: relative;
+  width: 960px;
+  font-family: ralewayLight;
+  color: #d2d2d2;
+}
+.home-container .home .event-slider-container .event-slider .event-slide {
+  text-align: center;
+}
+.home-container .home .event-slider-container .event-slider .event-slide .event-description {
+  font-size: 40px;
+}
+.home-container .home .event-slider-container .event-slider .event-slide .event-location {
+  font-size: 24px;
+  font-family: ralewayMedium;
+  color: #4f0606;
+}
+.home-container .home .event-slider-container .event-slider .event-slide .event-info {
+  padding: 40px 0;
+  font-size: 18px;
+}
+.home-container .home .event-slider-container .event-slider .event-slide .event-button {
+  width: 125px;
+}
+.home-container .patreon-section {
+  overflow-x: hidden;
+  color: #d2d2d2;
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+}
+.home-container .patreon-section .line {
+  display: flex;
+  position: absolute;
+  top: -1.5px;
+  left: 0;
+}
+.home-container .patreon-section .line .left {
+  border-left: 0px solid transparent;
+  border-top: 3px solid transparent;
+  border-right: 50vw solid #4f0606;
+  border-bottom: 3px solid transparent;
+}
+.home-container .patreon-section .line .right {
+  border-right: 0px solid transparent;
+  border-top: 3px solid transparent;
+  border-left: 50vw solid #4f0606;
+  border-bottom: 3px solid transparent;
+}
+.home-container .patreon-section .patreon-section-content {
+  max-width: 960px;
+  margin: auto;
+}
+.home-container .patreon-section .patreon-section-content h1 {
+  color: #4f0606;
+  font-family: ralewayBold;
+  font-size: 40px;
+}
+.home-container .patreon-section .patreon-section-content p {
+  font-family: ralewayLight;
+  font-size: 22px;
+  line-height: 1.5;
+  padding: 40px 0;
+}
+.home-container .patreon-section .patreon-section-content .patreon-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.home-container .patreon-section .patreon-section-content .patreon-header img {
+  width: 100px;
+  margin-left: 15px;
+  margin-right: 8px;
+}
+.home-container .patreon-section .patreon-section-content .patreon-button {
+  width: 200px;
+}
+@media (max-width: 960px) {
+  .home-container nav {
+    display: block;
+  }
+  .home-container .home {
+    background: none;
+    height: auto;
+    padding-top: 60px;
+  }
+  .home-container .home .home-header-mobile {
+    display: block;
+  }
+  .home-container .home .home-navigation,
+  .home-container .home .button-row {
+    display: none;
+  }
+  .home-container .home .event-slider-container {
+    position: relative;
+    padding: 60px 4%;
+    width: 100%;
+    height: 100%;
+  }
+  .home-container .home .event-slider-container .event-slider {
+    width: 100%;
+  }
+  .home-container .home .event-slider-container .event-slider .event-slide {
+    height: 100%;
+  }
+  .home-container .home .event-slider-container .event-slider .event-slide .event-description {
+    font-size: 32px;
+  }
+  .home-container .home .event-slider-container .event-slider .event-slide .event-info {
+    padding: 15px 0;
+  }
+  .home-container .patreon-section {
+    padding: 60px 4%;
+  }
+  .home-container .patreon-section .patreon-section-content {
+    width: 100%;
+  }
+  .home-container .patreon-section .patreon-section-content .patreon-header {
+    width: 189px;
+    margin: auto;
+  }
+  .home-container .patreon-section .patreon-section-content .patreon-header h1 {
+    font-size: 32px;
+  }
+  .home-container .patreon-section .patreon-section-content .patreon-header .patron {
+    font-size: 46px;
+  }
+  .home-container .patreon-section .patreon-section-content .patreon-header img {
+    width: 189px;
+    padding: 15px 0;
+  }
+  .home-container .patreon-section .patreon-section-content p {
+    font-size: 18px;
   }
 }
 @font-face {
@@ -646,13 +1132,13 @@ footer .container input {
 .music .albums .album .desc .line .left {
   border-left: 0px solid transparent;
   border-top: 3px solid transparent;
-  border-right: 40px solid #350d0d;
+  border-right: 40px solid #4f0606;
   border-bottom: 3px solid transparent;
 }
 .music .albums .album .desc .line .right {
   border-right: 0px solid transparent;
   border-top: 3px solid transparent;
-  border-left: 40px solid #350d0d;
+  border-left: 40px solid #4f0606;
   border-bottom: 3px solid transparent;
 }
 .music .albums .album .desc .listen-links {
@@ -688,13 +1174,13 @@ footer .container input {
 .music .music-header .line .left {
   border-left: 0px solid transparent;
   border-top: 3px solid transparent;
-  border-right: 50vw solid #350d0d;
+  border-right: 50vw solid #4f0606;
   border-bottom: 3px solid transparent;
 }
 .music .music-header .line .right {
   border-right: 0px solid transparent;
   border-top: 3px solid transparent;
-  border-left: 50vw solid #350d0d;
+  border-left: 50vw solid #4f0606;
   border-bottom: 3px solid transparent;
 }
 @media (max-width: 1400px) {
@@ -793,7 +1279,7 @@ footer .container input {
 nav {
   width: 100%;
   height: 75px;
-  background: #111;
+  background: #101010;
   position: fixed;
   z-index: 9999;
   display: flex;
@@ -803,7 +1289,7 @@ nav {
 nav .button-row {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 15px;
 }
 nav img {
   width: 70px;
@@ -854,13 +1340,13 @@ nav .line {
 nav .line .left {
   border-left: 0px solid transparent;
   border-top: 3px solid transparent;
-  border-right: 50vw solid #350d0d;
+  border-right: 50vw solid #4f0606;
   border-bottom: 3px solid transparent;
 }
 nav .line .right {
   border-right: 0px solid transparent;
   border-top: 3px solid transparent;
-  border-left: 50vw solid #350d0d;
+  border-left: 50vw solid #4f0606;
   border-bottom: 3px solid transparent;
 }
 @media (max-width: 1400px) {
@@ -871,7 +1357,7 @@ nav .line .right {
 @media (max-width: 960px) {
   nav {
     display: block;
-    height: 60pX;
+    height: 60px;
   }
   nav img {
     margin: 15px 0 0 15px;
@@ -892,7 +1378,7 @@ nav .line .right {
     top: 0;
     padding-top: calc(50vh - 161px);
     width: 100%;
-    background: #111;
+    background: #101010;
     z-index: 10;
     height: 100vh;
     display: block;
@@ -981,13 +1467,13 @@ nav .line .right {
 .setlist .setlist-header .line .left {
   border-left: 0px solid transparent;
   border-top: 3px solid transparent;
-  border-right: 45px solid #350d0d;
+  border-right: 45px solid #4f0606;
   border-bottom: 3px solid transparent;
 }
 .setlist .setlist-header .line .right {
   border-right: 0px solid transparent;
   border-top: 3px solid transparent;
-  border-left: 45px solid #350d0d;
+  border-left: 45px solid #4f0606;
   border-bottom: 3px solid transparent;
 }
 .setlist .setlist-header p {
@@ -1006,8 +1492,8 @@ nav .line .right {
 }
 .setlist .container .song {
   font-family: ralewayLight;
-  background: #111;
-  border-bottom: 2px solid #040404;
+  background: #101010;
+  border-bottom: 2px solid #000;
 }
 .setlist .container .song,
 .setlist .container .rows {
@@ -1066,15 +1552,15 @@ nav .line .right {
   box-sizing: border-box;
 }
 body {
-  background: #040404;
+  background: #000;
   overflow-x: hidden !important;
 }
 button {
+  cursor: pointer;
   border-style: none;
   font-family: ralewayBold;
   color: #d2d2d2;
-  background: #350d0d;
-  min-width: 125px;
+  background: #4f0606;
   padding: 15px 0;
   letter-spacing: 1px;
 }
@@ -1095,7 +1581,7 @@ li {
 .button-row a {
   width: 40px;
   height: 40px;
-  margin: 15px 15px 0 0;
+  margin: 0 15px 0 0;
 }
 .button-row a img {
   max-width: 40px;
