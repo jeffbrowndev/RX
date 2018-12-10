@@ -1,5 +1,9 @@
+var dotenv = require('dotenv');
 var keystone = require('keystone');
 var importRoutes = keystone.importer(__dirname);
+
+// Configure dotenv & global variables
+dotenv.config();
 
 // Import all routes
 var routes = {
@@ -7,7 +11,7 @@ var routes = {
 };
 
 // Route binding
-exports = module.exports = function(app) {
+exports = module.exports = function (app) {
   app.get('/', routes.views.index);
   app.get('/about', routes.views.about);
   app.get('/contact', routes.views.contact);

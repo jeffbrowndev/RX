@@ -2,8 +2,8 @@
 $(function () {
   $('#calendar').fullCalendar({
     events: {
-      googleCalendarApiKey: 'AIzaSyBUi6DRzrHwenMwyjscUveehyOZZ-Zrzx4',
-      googleCalendarId: 'jbloses@gmail.com',
+      googleCalendarApiKey: process.env.API_KEY,
+      googleCalendarId: process.env.CALENDAR_ID,
     }
   });
 });

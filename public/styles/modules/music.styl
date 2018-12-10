@@ -3,121 +3,95 @@
 
 // Music Rules
 .album-container
-  display: flex
-  justify-content: center
-  overflow-x: hidden
+  display flex
+  justify-content center
+  overflow-x hidden
 
 .music
-  color: $white
-
+  color $white
   .album:not(:last-child)
-    padding-bottom: 100px
-
+    padding-bottom 100px
   .albums
-    padding: $sectionPadding
-    font-family: $ralewayLight
-    display: inline-block
-
+    padding $sectionPadding
+    font-family $ralewayLight
+    display inline-block
     .album
-      display: flex
-      align-items: center
-
+      display flex
+      align-items center
       h2
-        font-size: 32px
-
+        font-size 32px
       h4
-        font-size: 22px
-        padding: 10px 0 25px 0
-
+        font-size 22px
+        padding 10px 0 25px 0
       ul
-        font-size: 20px
-
+        font-size 20px
         li
-          padding-bottom: 10px
-
+          padding-bottom 10px
       .desc
-        margin-left: 25px
-
+        margin-left 25px
         .line
           lineHorzShort(40px)
 
-          padding-bottom: 25px
-
+          padding-bottom 25px
         .listen-links
-          display: flex
-          padding-top: 25px
-
+          display flex
+          padding-top 25px
           a
-            width: 30px
-            margin-right: 10px
-
+            width 30px
+            margin-right 10px
   .music-header
-    position: relative
-    overflow-x: hidden
-
+    position relative
+    overflow-x hidden
     img
-      width: 100%
-
+      width 100%
     h1
-      position: absolute
-      top: calc(50% - 36px)
-      font-size: 125px
-      letter-spacing: 20px
-      width: 100%
-      text-align: center
-      font-family: $ralewayExtraBold
-
+      position absolute
+      top calc(50% - 36px)
+      font-size 125px
+      letter-spacing 20px
+      width 100%
+      text-align center
+      font-family $ralewayExtraBold
     .line
       lineHorz()
 
-      position: absolute
-      left: 0
-      bottom: 1.5px
+      position absolute
+      left 0
+      bottom 1.5px
 
 // Media Queries
 .music
   +mQ($desktopSmall)
     .music-header
       h1
-        font-size: 96px
-        top: calc(50% - 56px)
-
+        font-size 96px
+        top calc(50% - 56px)
   +mQ($tablet)
     .album-container
       .albums
-        padding: $sectionPaddingMobile
-
+        padding $sectionPaddingMobile
         .album:not(:last-child)
-          padding-bottom: 60px
-
+          padding-bottom 60px
         .album
-          display: block
-
+          display block
           img
-            width: 100%
-
+            width 100%
           .desc
-            margin: $smallPadding 0 0 0
-
+            margin $smallPadding 0 0 0
             h2
-              font-size: 26px
-
+              font-size 26px
             h4
-              font-size: 20px
-              padding: 10px 0 25px 0
-
+              font-size 20px
+              padding 10px 0 25px 0
             ul
-              font-size: 18px
-
+              font-size 18px
               li
-                padding-bottom: 10px
-
+                padding-bottom 10px
     .music-header
       img
-        width: 960px
-
+        width 960px
       h1
-        font-size: 64px
-        top: calc(50% - 7.5px)
-        left: 3%
-        letter-spacing: 10px
+        font-size 64px
+        top calc(50% - 7.5px)
+        left 3%
+        letter-spacing 10px

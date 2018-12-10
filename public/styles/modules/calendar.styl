@@ -1,9 +1,33 @@
 @import 'mixins'
 @import 'variables'
 
-#calendar
-  padding 175px 0 100px 0
-  color $white
-  font-family $ralewayLight
-  max-width 960px
-  margin auto
+// Main calendar styles
+.calendar-container
+  padding-top 75px
+  background url('/images/calendar_background.png')
+  background-size cover
+  background-position center center
+  h1
+    font-family $ralewayExtraBold
+    color $white
+    text-align center
+    font-size 125px
+    letter-spacing 20px
+    padding $largePadding 0
+  #calendar
+    color $white !important
+    font-family $ralewayMedium
+    max-width 1200px
+    margin auto
+    padding 0 2% $xLargePadding 2%
+
+// Media queries
+.calendar-container
+  +mQ(960px)
+    padding-top 60px
+    h1
+      padding $mediumPadding 0
+      font-size 64px
+      letter-spacing 10px
+    #calendar
+      padding-bottom $mediumPadding
