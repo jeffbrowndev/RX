@@ -3,4 +3,4 @@ RX is a Seattle-based singer, songwriter and instrumentalist best known for his 
 
 This website was built using Keystone.js, Stylus, and Pug. 
 
-rxisnext.com
+http://rxisnext.com
