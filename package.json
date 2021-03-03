@@ -13,7 +13,7 @@
     "@glidejs/glide": "^3.2.4",
     "dotenv": "^6.2.0",
     "keystone": "^4.0.0",
-    "pug": "^2.0.3"
+    "pug": "^3.0.1"
   },
   "devDependencies": {
     "concurrently": "^4.1.0"
