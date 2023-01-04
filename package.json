@@ -12,7 +12,7 @@
   "dependencies": {
     "@glidejs/glide": "^3.2.4",
     "dotenv": "^6.2.0",
-    "keystone": "^4.0.0",
+    "keystone": "^4.2.1",
     "pug": "^2.0.3"
   },
   "devDependencies": {
